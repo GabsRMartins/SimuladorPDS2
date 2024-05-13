@@ -75,19 +75,23 @@ Personagem* Simulador::proximoPersonagem(vector<Personagem*> equipe)
         return nullptr;
     }
 
-    int contador = 0;
-    while (contador < tamanho)
+      std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    int tentativasMaximas = tamanho * 2; 
+    while (tentativasMaximas > 0)
     {
-        if (equipe[contador]->getVida()>0)
+        int indiceAleatorio = std::rand() % tamanho;
+
+        if (equipe[indiceAleatorio]->getVida() > 0)
         {
-            return equipe[contador];
+            return equipe[indiceAleatorio];
         }
-        contador++;
-
+        tentativasMaximas--;
     }
-
     return nullptr;
 }
+
+   
+
 
 int Simulador::criarCombate(Personagem* personagem1, Personagem* personagem2)
 {

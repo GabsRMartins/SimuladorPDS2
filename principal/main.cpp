@@ -41,8 +41,8 @@ int main()
     ArmaDefesa* escudo5 = new PoderDaAmizade("O chainsawman", 999);
 
     
-    Personagem* p1 = new Luffy(1, "Luffy", 5000, arma, escudo);
-    Personagem* p2 = new Frieren(2, "Frieren", 7000, arma2, escudo2);
+    Personagem* p1 = new Luffy(1, "Luffy", 10000, arma, escudo);
+    Personagem* p2 = new Frieren(2, "Frieren", 10000, arma2, escudo2);
     Personagem* p3 = new Makima(3, "Makima", 2500, arma3, escudo3);
     Personagem* p4 = new Aspas(4, "Aspas", 2500, arma4, escudo4);
     Personagem* p5 = new Naomy(5, "Naomy", 2500, arma5, escudo5);
